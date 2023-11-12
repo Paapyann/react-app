@@ -11,6 +11,7 @@ import {
   deleteTaskRequest,
 } from "../service/requests";
 // import { ContextProvider } from "../App";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const ToDo = ({ addNotification }) => {
   // const { loading } = useContext(ContextProvider);
@@ -188,8 +189,8 @@ const ToDo = ({ addNotification }) => {
         {tasks.map((item, index) => {
           return (
             <Task
-            tasks={tasks}
-            setTasks={setTasks}
+              tasks={tasks}
+              setTasks={setTasks}
               key={index}
               task={item}
               handleDeleteTask={handleDeleteTask}
@@ -199,7 +200,13 @@ const ToDo = ({ addNotification }) => {
             />
           );
         })}
-        {tasks.length === 0 && <p>There are not tasks!</p>}
+
+        {tasks.length === 0 && (
+          <p style={{ textAlign: "center" }}>
+            {" "}
+            The taskbar is empty!<br></br>Would you like to add something?
+          </p>
+        )}
       </div>
       {tasks.length === 0 || (
         <div className={Styles.deleteAll}>

@@ -42,7 +42,7 @@ const Task = (props) => {
           <img src={editIcon} alt="edit" />
         </button>
       </div>
-      <Form>
+      {/* <Form>
         <Form.Check // prettier-ignore
           checked={task.status === "done"}
           type="switch"
@@ -69,7 +69,7 @@ const Task = (props) => {
             // setTasks(newTasks);
           }}
         />
-      </Form>
+      </Form> */}
     </div>
   );
 };

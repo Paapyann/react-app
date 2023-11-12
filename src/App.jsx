@@ -6,6 +6,8 @@ import Navbar from "./Components/Navbar/Navbar";
 import { ToastContainer, toast, TypeOptions } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
+import About from "./Components/AboutUS/About";
+import Contact from "./Components/ContactUS/contact";
 export const ContextProvider = createContext();
 
 const App = () => {
@@ -38,12 +40,19 @@ const App = () => {
             <Route
               path="/contact"
               element={
-                <button onClick={() => navigate("/", { state: { a: 5 } })}>
-                  Contact us
-                </button>
+                // <h3 style={{ textAlign: "center" }}>Have some questions?</h3>
+                <Contact />
+              }
+            />
+            <Route
+              path="/about"
+              element={
+                // <h3 style={{ textAlign: "center" }}>Have some questions?</h3>
+                <About />
               }
             />
           </Routes>
+
           <ToastContainer
             position="bottom-right"
             autoClose={5000}
