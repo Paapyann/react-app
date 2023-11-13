@@ -1,0 +1,31 @@
+h3 {
+  text-align: center;
+}
+
+.maindiv {
+  background-color: white;
+  width: 70%;
+  height: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.Membername {
+  font-size: 20px;
+  text-align: center;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+}
+
+.imgdiv {
+  background-color: white;
+  height: 80%;
+  border: 1px solid black;
+}
