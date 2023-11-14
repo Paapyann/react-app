@@ -10,7 +10,7 @@ const SingleTask = () => {
     <div className={Styles.container}>
       <p>Title: {state.title}</p>
       <p>Description: {state.description} </p>
-      <p>Date: </p>
+      <p>Date: {state.created_at}</p>
       <Link to="/">
         <Button>Go Home</Button>
       </Link>

@@ -29,3 +29,9 @@ h3 {
   height: 80%;
   border: 1px solid black;
 }
+
+.memberdescription {
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+}

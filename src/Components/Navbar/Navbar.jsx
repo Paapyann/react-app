@@ -24,7 +24,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import { FaList } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function BasicExample() {
@@ -47,7 +46,6 @@ function BasicExample() {
             <NavDropdown.Item href="#action/3.4">About us</NavDropdown.Item>
           </Link>
         </NavDropdown>
-        {/* <FaList /> */}
       </Container>
     </Navbar>
   );

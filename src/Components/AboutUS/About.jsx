@@ -25,17 +25,27 @@ const About = () => {
     //   </div>
     // </div>
     <div>
-      <h3>Team members</h3>
+      <h3>The team behind this project</h3>
       <div className={Styles.maindiv}>
-        <div>
+        <div style={{ width: "171px" }}>
           <Image src={img1} rounded style={{ marginTop: "40%" }} />
           <p className={Styles.Membername}>Levon Papyan</p>
-          <p className={Styles.description}>Page developer</p>
+          <p className={Styles.description}>Page developer </p>
+          <p className={Styles.memberdescription}>
+            Passionate web developer skilled in creating responsive and
+            user-friendly websites, combining creativity with technical
+            expertise to deliver seamless online experiences.
+          </p>
         </div>
-        <div>
+        <div style={{ width: "171px" }}>
           <Image src={img2} rounded style={{ marginTop: "40%" }} />
           <p className={Styles.Membername}>Nane Dnoyan</p>
           <p className={Styles.description}>Page designer</p>
+          <p className={Styles.memberdescription}>
+            Creative web designer dedicated to crafting visually stunning and
+            intuitive website designs, blending artistic flair with a keen eye
+            for user experience to bring digital visions to life.
+          </p>
         </div>
       </div>
     </div>

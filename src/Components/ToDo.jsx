@@ -4,6 +4,7 @@ import Task from "./Task/Task";
 import DeleteModal from "./deleteModal/deleteModal";
 import Styles from "./styles.module.css";
 import { idGeneretor } from "../helpers/idGeneretor";
+import Filter from "./Filter/Filter";
 import Button from "react-bootstrap/Button";
 import {
   createTaskRequest,
@@ -159,9 +160,14 @@ const ToDo = ({ addNotification }) => {
 
   return (
     <div>
-      <h1 style={{ textAlign: "center", color: "green", marginBottom: "50px" }}>
-        ToDo Project
-      </h1>
+      <h1 className={Styles.TodoName}>ToDo Project</h1>
+      <Filter tasks={tasks} setTasks={setTasks} />
+      <Button
+        onClick={() => getTaskRequest(setTasks)}
+        style={{ marginTop: "10px" }}
+      >
+        Reset
+      </Button>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Button onClick={() => handleOpenModal("isOpenAddModal")}>
           Add Task
