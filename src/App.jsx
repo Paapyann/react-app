@@ -8,6 +8,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import About from "./Components/AboutUS/About";
 import Contact from "./Components/ContactUS/contact";
+import Papyan from "./Components/papyan/papyan";
+import Dnoyan from "./Components/dnoyan/dnoyan";
 export const ContextProvider = createContext();
 
 const App = () => {
@@ -37,20 +39,10 @@ const App = () => {
               element={<ToDo addNotification={addNotification} />}
             />
             <Route path="/singleTask/:id" element={<SingleTask />} />
-            <Route
-              path="/contact"
-              element={
-                // <h3 style={{ textAlign: "center" }}>Have some questions?</h3>
-                <Contact />
-              }
-            />
-            <Route
-              path="/about"
-              element={
-                // <h3 style={{ textAlign: "center" }}>Have some questions?</h3>
-                <About />
-              }
-            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/about/papyan" element={<Papyan />} />
+            <Route path="/about/dnoyan" element={<Dnoyan />} />
           </Routes>
 
           <ToastContainer

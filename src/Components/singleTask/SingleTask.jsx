@@ -10,7 +10,7 @@ const SingleTask = () => {
     <div className={Styles.container}>
       <p>Title: {state.title}</p>
       <p>Description: {state.description} </p>
-      <p>Date: {state.created_at}</p>
+      <p>Date: {state.created_at.split("T", 1)[0]}</p>
       <Link to="/">
         <Button className={Styles.gohomebttn} style={{ border: "none" }}>
           Go Home

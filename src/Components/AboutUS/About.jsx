@@ -30,7 +30,7 @@ const About = () => {
       <div className={Styles.maindiv}>
         <div style={{ width: "171px" }}>
           <Image src={img1} rounded style={{ marginTop: "40%" }} />
-          <Link style={{ textDecoration: "none" }}>
+          <Link to="/about/papyan" style={{ textDecoration: "none" }}>
             <p className={Styles.Membername}>Levon Papyan</p>
           </Link>
           <p className={Styles.description}>Page developer </p>
@@ -46,7 +46,9 @@ const About = () => {
             rounded
             style={{ marginTop: "40%", opacity: "1" }}
           />
-          <p className={Styles.Membername}>Nane Dnoyan</p>
+          <Link to="/about/dnoyan" style={{ textDecoration: "none" }}>
+            <p className={Styles.Membername}>Nane Dnoyan</p>
+          </Link>
           <p className={Styles.description}>Page designer</p>
           <p className={Styles.memberdescription}>
             Creative web designer dedicated to crafting visually stunning and

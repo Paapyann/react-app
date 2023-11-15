@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import Styles from "./styles.module.css";
 const Filter = ({ tasks, setTasks }) => {
   const [searchData, setSearchData] = useState();
   const filterByTitle = () => {
@@ -11,6 +12,7 @@ const Filter = ({ tasks, setTasks }) => {
   return (
     <div style={{ display: "flex", marginTop: "50px" }}>
       <Form.Control
+        className={Styles.searchbar}
         placeholder="Search ..."
         onChange={(e) => setSearchData(e.target.value)}
       />
