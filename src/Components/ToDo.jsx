@@ -160,16 +160,23 @@ const ToDo = ({ addNotification }) => {
 
   return (
     <div>
-      <h1 className={Styles.TodoName}>ToDo Project</h1>
+      <h1 className={Styles.TodoName}>ToDo List</h1>
       <Filter tasks={tasks} setTasks={setTasks} />
       <Button
         onClick={() => getTaskRequest(setTasks)}
-        style={{ marginTop: "10px" }}
+        style={{
+          backgroundColor: "#866753",
+          border: "none",
+          marginTop: "10px",
+        }}
       >
         Reset
       </Button>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <Button onClick={() => handleOpenModal("isOpenAddModal")}>
+        <Button
+          style={{ backgroundColor: "#866753", border: "none" }}
+          onClick={() => handleOpenModal("isOpenAddModal")}
+        >
           Add Task
         </Button>
       </div>
@@ -217,12 +224,16 @@ const ToDo = ({ addNotification }) => {
       {tasks.length === 0 || (
         <div className={Styles.deleteAll}>
           <button
+            style={{ backgroundColor: "#866753", opacity: "0.8" }}
             onClick={() => handleOpenModal("isOpenDeleteModal")}
             disabled={checkedTasks.size === 0}
           >
-            Delete Cheked tasks
+            Delete checked tasks
           </button>
-          <button onClick={handleCheckAllTasks} style={{ background: "green" }}>
+          <button
+            onClick={handleCheckAllTasks}
+            style={{ backgroundColor: "#866753", opacity: "0.8" }}
+          >
             {checkedTasks.size === tasks.length ? "Uncheck All" : "Check All"}
           </button>
           {/* <button onClick={() => setNum(num + 1)}>for context</button> */}

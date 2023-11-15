@@ -11,10 +11,17 @@ const Filter = ({ tasks, setTasks }) => {
   return (
     <div style={{ display: "flex", marginTop: "50px" }}>
       <Form.Control
-        placeholder="search ..."
+        placeholder="Search ..."
         onChange={(e) => setSearchData(e.target.value)}
       />
-      <Button style={{ marginLeft: "15px" }} onClick={filterByTitle}>
+      <Button
+        style={{
+          backgroundColor: "#866753",
+          border: "none",
+          marginLeft: "15px",
+        }}
+        onClick={filterByTitle}
+      >
         Search
       </Button>
     </div>

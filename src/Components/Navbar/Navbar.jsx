@@ -24,25 +24,32 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 
 function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={Styles.bgrnd}>
       <Container>
-        <Link to="/">
-          <Navbar.Brand href="#home">To-do Project</Navbar.Brand>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Navbar.Brand href="#home" style={{ color: "white" }}>
+            To-do Project
+          </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto"></Nav>
         </Navbar.Collapse>
-        <NavDropdown title="Menu" id="basic-nav-dropdown">
-          <Link to="/contact">
+        <NavDropdown
+          title="Menu"
+          id="basic-nav-dropdown"
+          style={{ color: "white" }}
+        >
+          <Link to="/contact" style={{ textDecoration: "none" }}>
             <NavDropdown.Item href="#action/3.2">Contact us</NavDropdown.Item>
           </Link>
           <NavDropdown.Divider />
-          <Link to="/about">
+          <Link to="/about" style={{ textDecoration: "none" }}>
             <NavDropdown.Item href="#action/3.4">About us</NavDropdown.Item>
           </Link>
         </NavDropdown>

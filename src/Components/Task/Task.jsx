@@ -23,13 +23,15 @@ const Task = (props) => {
           checked={checkedTasks.has(task._id)}
           style={{ margin: "5px" }}
         />
-        <Link to={`/singleTask/${task._id}`} state={task}>
-          <p style={{ borderBottom: "2px dotted black" }}>
-            Title: {task.title}
-          </p>
+        <Link
+          style={{ textDecoration: "none" }}
+          to={`/singleTask/${task._id}`}
+          state={task}
+        >
+          <p style={{ borderBottom: "2px dotted black" }}>{task.title}</p>
         </Link>
         <p>Description: {task.description}</p>
-        <p>Date: {task.created_at}</p>
+        <p>Date: {task.created_at.split("T", 1)[0]}</p>
       </div>
       <div className={Styles.iconsContainer}>
         <button
@@ -45,13 +47,15 @@ const Task = (props) => {
           <img src={editIcon} alt="edit" />
         </button>
       </div>
-      {/* <Form>
-        <Form.Check // prettier-ignore
+      <Form>
+        <Form.Check
+          style={{marginLeft: '5px'}} // prettier-ignore
           checked={task.status === "done"}
           type="switch"
           id="custom-switch"
           label="Check this switch"
           onChange={async (e) => {
+            console.log(e.target.checked);
             const response = await fetch(
               `http://localhost:3001/task/${task._id}`,
               {
@@ -65,14 +69,16 @@ const Task = (props) => {
               }
             );
             const data = await response.json();
-            const newTasks = tasks.map((i) => {
-              //================== homework
+            const newTasks = tasks.map((item) => {
+              if (item._id === task._id) {
+                return { ...item, status: data.status };
+              }
+              return item;
             });
-            console.log(newTasks, "newTasks");
-            // setTasks(newTasks);
+            setTasks(newTasks);
           }}
         />
-      </Form> */}
+      </Form>
     </div>
   );
 };

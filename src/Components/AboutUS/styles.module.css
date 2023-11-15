@@ -3,7 +3,7 @@ h3 {
 }
 
 .maindiv {
-  background-color: white;
+  background-color: rgba(173, 151, 127, 0.7);
   width: 70%;
   height: 500px;
   display: flex;
@@ -17,11 +17,13 @@ h3 {
 .Membername {
   font-size: 20px;
   text-align: center;
+  color: rgb(255, 255, 255, 0.9);
 }
 
 .description {
   font-size: 16px;
   text-align: center;
+  color: rgb(255, 255, 255, 0.8);
 }
 
 .imgdiv {
@@ -34,4 +36,5 @@ h3 {
   font-size: 12px;
   text-align: center;
   width: 100%;
+  color: rgb(255, 255, 255, 0.7);
 }

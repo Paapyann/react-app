@@ -6,6 +6,7 @@ import img1 from "../../images/handsome_pic_vtc.jpg";
 import img2 from "../../images/IMG_6468.jpg";
 import logos from "../../images/Untitled.png";
 import Styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -29,7 +30,9 @@ const About = () => {
       <div className={Styles.maindiv}>
         <div style={{ width: "171px" }}>
           <Image src={img1} rounded style={{ marginTop: "40%" }} />
-          <p className={Styles.Membername}>Levon Papyan</p>
+          <Link style={{ textDecoration: "none" }}>
+            <p className={Styles.Membername}>Levon Papyan</p>
+          </Link>
           <p className={Styles.description}>Page developer </p>
           <p className={Styles.memberdescription}>
             Passionate web developer skilled in creating responsive and
@@ -38,7 +41,11 @@ const About = () => {
           </p>
         </div>
         <div style={{ width: "171px" }}>
-          <Image src={img2} rounded style={{ marginTop: "40%" }} />
+          <Image
+            src={img2}
+            rounded
+            style={{ marginTop: "40%", opacity: "1" }}
+          />
           <p className={Styles.Membername}>Nane Dnoyan</p>
           <p className={Styles.description}>Page designer</p>
           <p className={Styles.memberdescription}>

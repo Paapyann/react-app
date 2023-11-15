@@ -12,7 +12,9 @@ const SingleTask = () => {
       <p>Description: {state.description} </p>
       <p>Date: {state.created_at}</p>
       <Link to="/">
-        <Button>Go Home</Button>
+        <Button className={Styles.gohomebttn} style={{ border: "none" }}>
+          Go Home
+        </Button>
       </Link>
     </div>
   );

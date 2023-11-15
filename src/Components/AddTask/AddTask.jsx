@@ -69,10 +69,12 @@ const AddTask = ({
         </Form>
       </Modal.Body>
       <Modal.Footer>
-        <Button variant="secondary" onClick={() => onHide("isOpenAddModal")}>
-          Close
-        </Button>
         <Button
+          style={{
+            backgroundColor: "#866753",
+            textDecoration: "none",
+            border: "none",
+          }}
           variant="primary"
           onClick={() => submit(!isAddState ? editTask : undefined)}
         >

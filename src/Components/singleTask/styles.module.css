@@ -2,7 +2,7 @@
   width: 50%;
   margin: auto;
   height: 400px;
-  background-color: rgb(176, 122, 227);
+  background-color: rgb(153, 118, 78, 0.7);
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,4 +10,12 @@
 }
 .container p {
   margin: 20px;
+}
+
+.gohomebttn {
+  background-color: rgb(134, 103, 83);
+}
+
+.gohomebttn:hover {
+  background-color: rgb(134, 103, 83);
 }
