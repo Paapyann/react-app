@@ -16,7 +16,7 @@ const Task = (props) => {
   } = props;
   return (
     <div className={Styles.task}>
-      <div>
+      <div className={Styles.chckboxdiv}>
         <input
           type="checkbox"
           onChange={() => handleOnChange(task._id)}

@@ -37,8 +37,25 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.form input[type="checkbox"]:checked {
-  background-color: #866753;
+.chckboxdiv input[type="checkbox"]:checked {
+  accent-color: rgba(134, 103, 83, 0.8);
+
   border: none;
-  box-shadow: 0 0 4px 2px rgba(134, 103, 83, 0.9);
+}
+
+.chckboxdiv input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+}
+
+.form input[type="checkbox"] {
+  border: none;
+  box-shadow: none;
+  color: rgba(134, 103, 83, 0.6);
+}
+
+.form input[type="checkbox"]:checked {
+  background-color: rgba(134, 103, 83, 0.6);
+  border: none;
+  box-shadow: 0 0 4px 2px rgba(134, 103, 83, 0.8);
 }
