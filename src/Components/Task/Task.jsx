@@ -59,7 +59,7 @@ const Task = (props) => {
         </button>
       </div>
       <br />
-      <Form>
+      <Form className={Styles.form}>
         <Form.Check
           style={{marginLeft: '10px', color: 'rgb(255, 255, 255, 0.8)'}} // prettier-ignore
           checked={task.status === "done"}
