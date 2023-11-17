@@ -28,10 +28,21 @@ const Task = (props) => {
           to={`/singleTask/${task._id}`}
           state={task}
         >
-          <p style={{ borderBottom: "2px dotted black" }}>{task.title}</p>
+          <p
+            style={{
+              borderBottom: "2px dotted rgb(255, 255, 255, 0.7)",
+              color: "rgb(255, 255, 255, 0.7)",
+            }}
+          >
+            {task.title}
+          </p>
         </Link>
-        <p>Description: {task.description}</p>
-        <p>Date: {task.created_at.split("T", 1)[0]}</p>
+        <p style={{ color: "rgb(255, 255, 255, 0.7)" }}>
+          Description: {task.description}
+        </p>
+        <p style={{ color: "rgb(255, 255, 255, 0.7)" }}>
+          Date: {task.created_at.split("T", 1)[0]}
+        </p>
       </div>
       <div className={Styles.iconsContainer}>
         <button
@@ -47,13 +58,14 @@ const Task = (props) => {
           <img src={editIcon} alt="edit" />
         </button>
       </div>
+      <br />
       <Form>
         <Form.Check
-          style={{marginLeft: '5px'}} // prettier-ignore
+          style={{marginLeft: '10px', color: 'rgb(255, 255, 255, 0.8)'}} // prettier-ignore
           checked={task.status === "done"}
           type="switch"
           id="custom-switch"
-          label="Check this switch"
+          // label="Check this switch"
           onChange={async (e) => {
             console.log(e.target.checked);
             const response = await fetch(

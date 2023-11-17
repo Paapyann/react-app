@@ -215,7 +215,7 @@ const ToDo = ({ addNotification }) => {
         })}
 
         {tasks.length === 0 && (
-          <p style={{ textAlign: "center" }}>
+          <p style={{ textAlign: "center", color: "rgb(255, 255, 255, 0.65)" }}>
             {" "}
             The taskbar is empty!<br></br>Would you like to add something?
           </p>
