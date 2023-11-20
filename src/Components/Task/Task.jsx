@@ -31,7 +31,7 @@ const Task = (props) => {
           <p
             style={{
               borderBottom: "2px dotted rgb(255, 255, 255, 0.7)",
-              color: "rgb(255, 255, 255, 0.7)",
+              color: "rgb(255, 255, 255, 0.69)",
             }}
           >
             {task.title}
